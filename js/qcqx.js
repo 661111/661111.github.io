@@ -1,7 +1,4 @@
-/*!
- * clipboard.js v2.0.10
- * https://clipboardjs.com/
- */
+/*  1.backgroud */
 try {
     let e = loadData("blogbg", 1440);
     e ? changeBg(e, 1) : localStorage.removeItem("blogbg")
