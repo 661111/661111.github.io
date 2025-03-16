@@ -1425,11 +1425,126 @@ div#error-wrap {
   .author-content-item.skills:hover .skills-style-group .skills-list {
     opacity: 1;
   }
+/* 装备页面美化（icat） */
+/* 由苏晓河进行编写以及调整 */
+/* 时间：2025年2月5日 */
+
+#icat-equipment > h2 {
+    margin: 20px 7px 0;
+  }
+  #icat-equipment .equipment-desc {
+    margin: 0 7px;
+    color: var(--icat-secondtext);
+  }
+  #icat-equipment {
+    padding-bottom: 12px;
+  }
+  #icat-equipment .equipment {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0 0;
+    gap: 16px;
+  }
+  /* 初始化 */
+  
+  #icat-equipment .equipment > .icat-equipment-box {
+    border: 1px solid var(--icat-secondbg);
+    background: var(--icat-card-bg);
+    width: calc(100% / 4 - 12px);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  #icat-equipment .equipment .icat-equipment-box img {
+    min-width: 100%;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    animation:fadeIn 1s;
+    cursor:pointer;
+    transition:all .4s ease-in-out;
+  }
+  #icat-equipment .equipment .icat-equipment-box img:hover {
+      transform:scale(1.03);
+  }
+  #icat-equipment .equipment .icat-equipment-box .icat-equipment-content {
+    padding: 16px;
+  }
+  #icat-equipment .equipment .icat-equipment-box .icat-equipment-content .icat-equipment-name {
+    color: var(--icat-fontcolor);
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #icat-equipment .equipment .icat-equipment-box .icat-equipment-content .icat-equipment-custom {
+    font-size: 12px;
+    color: var(--icat-secondtext);
+    line-height: 1;
+    margin-bottom: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #icat-equipment .equipment .icat-equipment-box .icat-equipment-content .icat-equipment-opinion {
+    line-height: 20px;
+    color: var(--icat-secondtext);
+    height: 60px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-bottom: 16px;
+  }
+  #icat-equipment .equipment .icat-equipment-box .icat-equipment-content .icat-equipment-box-more {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #icat-equipment .equipment .icat-equipment-box .icat-equipment-content .icat-equipment-box-more a {
+    font-size: 12px;
+    background: var(--icat-gray-op);
+    color: var(--icat-fontcolor);
+    padding: 4px 12px;
+    border-radius: 6px;
+    letter-spacing: 1px;
+  }
+  #icat-equipment .equipment .icat-equipment-box .icat-equipment-content .icat-equipment-box-more a:hover {
+    color: var(--icat-white);
+    background: var(--icat-blue);
+    box-shadow: 0 8px 16px -4px var(--icat-black-op);
+  }
+  /* 好物页基础样式 */
+  
+  @media screen and (max-width: 900px) {
+    #icat-equipment .equipment {
+      gap: 10px;
+    }
+    #icat-equipment .equipment > .icat-equipment-box {
+      width: calc(100% / 3 - 7px);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    #icat-equipment .equipment {
+      gap: 8px;
+    }
+    #icat-equipment .equipment > .icat-equipment-box {
+      width: 100%;
+    }
+    #icat-equipment .equipment .icat-equipment-box img {
+      height: 220px;
+    }
+  }
+  /* 响应式 */
+  
+  /* 我的好物样式 */
 /* 即刻短文美化（安知鱼） */
 /* 由苏晓河进行编写以及调整 */
 /* 时间：2025年2月4日 */
 
-#page:has(#essay_page) {
+  #page:has(#essay_page) {
     border: 0;
     box-shadow: none !important;
     padding: 0 !important;
@@ -1437,9 +1552,6 @@ div#error-wrap {
   }
   #page:has(#essay_page) .page-title {
     display: none;
-  }
-  #web_bg ~ .page:has(#essay_page) {
-    background: var(--anzhiyu-background);
   }
   #bber .bber-container-img {
     display: flex;
@@ -1940,6 +2052,185 @@ div#error-wrap {
     -ms-transition: all .3s;
     transition: all .3s;
     border-radius: 12px;
+}
+:root {
+    --post-bj-hx: #8a8a8a21;
+    --post-bj-sx: hsla(0, 100%, 50%, .45);
+}
+[data-theme="dark"] {
+    --post-bj-hx: #8a8a8a2f;
+    --post-bj-sx: rgba(0, 255, 250, 0.6);
+}
+div#post #article-container {
+    line-height: 1.5;
+    background-size: 100% 39px;
+    background-image: linear-gradient(transparent 38px, var(--post-bj-hx) 1px), linear-gradient(to right, transparent 11px, var(--post-bj-sx), transparent 12px);
+    padding-bottom: 32px !important;
+}
+div#post {
+    border-radius: 18px;
+    padding: 0;
+    padding-bottom: 10px;
+}
+#post>:not(#post-info):not(.fixedcomment) {
+    width: calc(100% - 26px);
+    padding: 0 18px;
+    margin-left: auto;
+    margin-right: auto;
+}
+span.post-categories {
+    margin-left: 10px;
+}
+span.post-categories:nth-child(1) {
+    margin-left: 0;
+}
+/* 文章详情信息模块美化 */
+/* 由苏晓河进行编写以及调整 */
+/* 时间：2025年3月7日 */
+
+#post>#post-info {
+    text-align: left;
+    border-radius: 18px;
+}
+#post-info {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 310px;
+    padding: 0 3rem;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    margin-bottom: 10px !important;
+    border-radius: 8px;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -o-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -o-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 30px;
+    background-position-y: 30%;
+}
+#post-info::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, .32);
+    border-radius: 18px;
+}
+#post #post-info>#post-meta-top {
+    font-size: 105%;
+}
+
+#post-info #post-meta, #post-meta-top {
+    z-index: 1;
+}
+#post-info #post-meta-top .post-categories {
+    padding: 0 10px;
+    display: inline-block;
+    background: rgba(58, 58, 58, .36);
+    color: #fff !important;
+    border-radius: 6px;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -o-transition: .25s;
+    -ms-transition: .25s;
+    transition: .25s;
+}
+#post-info #post-meta-top .post-categories i {
+    color: #fff;
+    margin-right: 4px;
+    font-size: 13px;
+}
+#post-info #post-meta-top .post-meta-categories, #post-info #post-meta-top .post-meta-tags {
+    color: #fff;
+    text-decoration: none !important;
+    font-size: 17px;
+}
+#post-info #post-meta-top .post-meta-tags {
+    margin-left: 10px;
+}
+
+#post-info #post-meta-top .post-meta-categories, #post-info #post-meta-top .post-meta-tags {
+    color: #fff;
+    text-decoration: none !important;
+    font-size: 17px;
+}
+#post>#post-info .post-title {
+    color: #fff;
+    margin: 3px 0 10px 0 !important;
+    font-weight: 600 !important;
+    font-size: 40px !important;
+    border-bottom: none;
+    line-height: 1.5;
+    -webkit-line-clamp: 3;
+}
+[data-theme=dark] a {
+    color: rgba(255, 255, 255, .9);
+}
+#share-post i.fa.fa-share-alt {
+    font-size: 25px;
+    color: #0fd9e7;
+    padding-left: 8px;
+    text-shadow: -.5px .5px 0 #fff, .5px .5px 0 #fff, .5px -.5px 0 #fff, -.5px -.5px 0 #fff;
+}
+#post>#post-info #post-meta, #post>#post-info #post-meta a {
+    color: rgba(255, 255, 255, .9);
+}
+
+#post>#post-info #post-meta, #post>#post-info #post-meta a {
+    color: #78818a;
+}
+#post-info #post-meta, #post-meta-top {
+    z-index: 1;
+}
+#post-info #post-meta {
+    color: var(--light-grey);
+    font-size: 105%;
+}
+#post-info #post-meta>.meta-firstline, #post-info #post-meta>.meta-secondline {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -o-box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+#post-info #post-meta>.meta-firstline>span, #post-info #post-meta>.meta-secondline>span {
+    margin: 5px 10px 5px 0;
+    padding: 0 10px;
+    display: inline-block;
+    background: rgba(58, 58, 58, .36);
+    color: #fff !important;
+    border-radius: 6px;
+}
+#post-info #post-meta .post-meta-icon, #post-info #post-meta .post-meta-label {
+    margin-right: 4px;
+}
+
+#post-info {
+    background-image: attr(data-cover url);
 }
 #icat-bber {
   margin-top: 1.5rem;
