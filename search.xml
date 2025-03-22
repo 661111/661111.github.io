@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>公益服务平台</title>
+      <title>公益服务平台(统计免费服务)</title>
       <link href="/posts/public.html"/>
       <url>/posts/public.html</url>
       
-        <content type="html"><![CDATA[<h2 id="公益服务">公益服务</h2><p>下表中为旗下公益服务：</p><table><thead><tr><th>序号</th><th>服务名称</th><th>状态/说明</th><th>地址</th></tr></thead><tbody><tr><td>1</td><td>JSD镜像服务</td><td>需提交域名过白</td><td>/posts/jsdmirror.html</td></tr><tr><td>2</td><td>免费域名服务</td><td>需提交申请</td><td>/posts/free-domain.html</td></tr></tbody></table>]]></content>
+        <content type="html"><![CDATA[<h2 id="本站公益服务">本站公益服务</h2><p>下表中为旗下公益服务：</p><table><thead><tr><th>序号</th><th>服务名称</th><th>状态/说明</th><th>地址</th></tr></thead><tbody><tr><td>1</td><td>JSD镜像服务</td><td>需提交域名过白</td><td>/posts/jsdmirror.html</td></tr><tr><td>2</td><td>免费域名服务</td><td>需提交申请</td><td><a href="mailto:3227988255@QQ.COM">3227988255@QQ.COM</a></td></tr></tbody></table><h2 id="其他免费服务">其他免费服务</h2><p>下表为来源其他的服务：</p>]]></content>
       
       
       <categories>
