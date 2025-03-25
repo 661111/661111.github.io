@@ -243,7 +243,8 @@
     --qx-ai-post-bg: rgba(255,255,255,0.32);
     --qx-ai-border: 1px solid #e3e8f7bd;
     --qx-ai-tag-bg: rgba(48, 52, 63, 0.86);
-    --reward-main: #f1f3f8
+    --reward-main: #f1f3f8;
+    --sidebar-bg: #f6f8fa
 }
 
 ::selection {
@@ -287,7 +288,7 @@
     --text-highlight-color: rgba(255,255,255,0.9);
     --ah-card-bg: #232326;
     --style-border-always: 1px solid var(--heo-card-border);
-    --font-color: rgba(255,255,255,0.86);
+    --font-color: rgba(255,255,255,0.86)!important;
     --ah-hover-bg: rgba(255,255,255,0.2);
     --dark-grey: rgba(255, 255, 255, 0.746);
     --btn-hover-color: #00c4b6;
@@ -324,7 +325,9 @@
     --qx-ai-post-bg: rgba(48, 52, 63, 0.35);
     --qx-ai-border: 1px solid #3d3d3f;
     --qx-ai-tag-bg: #30343f;
-    --reward-main: #30343f
+    --text-highlight-color: #fff!important;
+    --reward-main: #30343f;
+    --sidebar-bg: rgba(18, 18, 18, .8)!important
 }
 :root{
     --heo-white: #fff;
