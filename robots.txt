@@ -1,10 +1,7 @@
+# START nuxt-robots (indexable)
 User-agent: *
+Disallow: /preview
+Disallow: /previews/*
 
-Disallow: /archives/
-Disallow: /categories/
-Disallow: /tags/
-Disallow: /images/
-
-Allow: /
-
-Sitemap: https://www.sxiaohe.top/sitemap.xml
+Sitemap: https://www.myxz.top/sitemap.xml
+# END nuxt-robots
